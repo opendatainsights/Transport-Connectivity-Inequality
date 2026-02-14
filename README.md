@@ -217,4 +217,4 @@ Census data: [© Crown copyright](https://www.ons.gov.uk/methodology/geography/l
 
 [Open Data Insights](https://opendatainsights.org) is a UK-focused open-access research initiative that turns public datasets into analysis that councils, health bodies, and civil society organisations can act on.
 
-> *Open data should lead to open decisions.*
+> *We believe open data should lead to open decisions!*
