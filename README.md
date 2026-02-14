@@ -1,8 +1,6 @@
 # Transport Connectivity & Inequality
 
 
----
-
 ## Overview
 
 This project develops a multi-level analytical framework to measure structural transport inequality across England and Wales.
@@ -33,14 +31,14 @@ The goal is to identify communities facing the greatest mobility barriers and to
 
 All datasets are open-access:
 
-| Source | Detail | Level |
-|--------|--------|-------|
-| **Department for Transport (DfT)** | Connectivity Metrics (2025) | LSOA |
-| **IMD 2019** | Index of Multiple Deprivation | LSOA |
-| **Census 2021** | Car Ownership, Disability, Population Structure | OA |
-| **ONS Rural–Urban Classification** | Settlement type indicators | LSOA / LAD |
-| **ONS Population Estimates & Density** | Mid-year estimates | LAD |
-| **ONS Geographic Lookup Tables** | OA → LSOA → LAD → Region | All levels |
+| Source | Detail | Level | Link |
+|--------|--------|-------|------|
+| **Department for Transport (DfT)** | Connectivity Metrics (2025) | LSOA | [DfT Statistics](https://www.gov.uk/government/collections/transport-connectivity-statistics) |
+| **IMD 2019** | Index of Multiple Deprivation | LSOA | [IMD 2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) |
+| **Census 2021** | Car Ownership, Disability, Population Structure | OA | [Census 2021](https://www.ons.gov.uk/census) |
+| **ONS Rural–Urban Classification** | Settlement type indicators | LSOA / LAD | [Rural–Urban Classification](https://www.ons.gov.uk/methodology/geography/geographicalproducts/ruralurbanclassifications) |
+| **ONS Population Estimates & Density** | Mid-year estimates | LAD | [Population Estimates](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates) |
+| **ONS Geographic Lookup Tables** | OA → LSOA → LAD → Region | All levels | [ONS Geoportal](https://geoportal.statistics.gov.uk/) |
 
 ---
 
