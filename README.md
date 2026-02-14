@@ -1,6 +1,5 @@
 # Transport Connectivity & Inequality
 
-**Open Data Insights — Research Programme 01**
 
 ---
 
