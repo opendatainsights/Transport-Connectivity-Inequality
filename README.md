@@ -2,80 +2,94 @@
 
 ## Overview
 
-This project builds a multi-level, policy-ready analytical framework that quantifies structural transport inequality across England and Wales.
+This project builds a multi-level analytical framework that quantifies structural transport inequality across England and Wales.
 
-Using the Department for Transport's new national Connectivity Metric — launched in September 2025 as the first standardised measure of how easily people can reach jobs, healthcare, education, shopping, leisure, and social engagements — we integrate connectivity scores with deprivation, disability, rurality, and car ownership data to expose where and why accessibility gaps exist.
+Using the Department for Transport's national Connectivity Metric, launched in September 2025 as the first standardised measure of how easily people can reach jobs, healthcare, education, shopping, leisure, and social engagements, we link connectivity scores with deprivation, disability, rurality, and car ownership data to show where and why accessibility gaps exist.
 
-The analysis operates across four nested geographic levels: Output Area (OA), Lower Super Output Area (LSOA), Local Authority District (LAD), and Region. The goal is to produce outputs that councils, NHS Integrated Care Boards, and transport authorities can act on directly.
+The analysis runs across four nested geographic levels: Output Area (OA), Lower Super Output Area (LSOA), Local Authority District (LAD), and Region. The outputs are designed for councils, NHS Integrated Care Boards, and transport authorities to use directly.
 
 ---
 
 ## Core Impact Question
 
-> **Which communities face the largest structural barriers to mobility, healthcare access, employment, and essential services — and what role do deprivation, rurality, and car dependency play?**
+> **Which communities face the largest structural barriers to mobility, healthcare access, employment, and essential services, and what drives those barriers?**
 
 ---
 
 ## Research Questions
 
 ### Geographic Variation
-1. How does transport connectivity vary across OA → LSOA → LAD → Region?
-2. Where are the worst-performing 10% of areas, and what structural characteristics do they share?
+1. How does transport connectivity vary across OA, LSOA, LAD, and Region?
+2. What structural characteristics do the worst-performing 10% of areas share?
 
-### Inequality Gradient
+### The Deprivation Gap
 3. What is the public transport accessibility gap between IMD Decile 1 (most deprived) and Decile 10 (least deprived)?
-4. Does the inequality gradient widen or narrow when aggregated from LSOA to LAD or Region?
+4. Does that gap widen or narrow when aggregated from LSOA to LAD or Region?
 
-### Urban–Rural Structure
+### Urban and Rural Structure
 5. How much of poor connectivity is explained by rurality versus deprivation?
-6. Are there urban areas performing worse than expected given their density?
+6. Which urban areas perform worse than expected given their population density?
 
-### Healthcare Access
-7. Are high-disability areas also low in public transport access to healthcare services?
-8. Where is the largest need–connectivity mismatch?
+### Healthcare Access and Disability
+7. How many disabled people live in areas with low public transport access to healthcare?
+8. Where are the largest mismatches between healthcare need and public transport provision?
+9. Which NHS Integrated Care Board areas have the highest concentration of need-connectivity gaps?
 
-### Car Dependency
-9. Does high driving connectivity mask weak public transport provision?
-10. Which Local Authorities are structurally car-dependent, and what are the equity implications?
+### Car Dependency and Structural Exclusion
+10. Where does high driving connectivity mask weak or absent public transport?
+11. Which Local Authorities are structurally car-dependent, and what does that mean for households without a car?
+12. In the most deprived LSOAs, what proportion of households have no car and also fall in the bottom 20% for public transport connectivity?
+
+### Transport Deserts
+13. How many people live in areas that CPRE would classify as transport deserts, and what is their demographic profile?
+14. Are transport deserts concentrated in particular regions or spread across the country?
 
 ---
 
 ## Policy Context
 
-This project is directly relevant to several active policy agendas:
+This work connects to several live policy debates:
 
-- **DfT Connectivity Metric (September 2025):** The Government's first nationally agreed connectivity score, intended for annual reporting and described as the new "national metric of connectivity" for planning decisions. The Transport Secretary has positioned it as central to housing delivery and sustainable transport planning.
-- **Bus Services Bill (2025):** Progressing through Parliament with measures on bus franchising, accessibility, and minimum connectivity standards for underserved areas.
-- **Transport Committee Report (August 2025):** Called for urgent bus funding reform, minimum public transport connectivity standards, and protection of socially necessary rural routes.
-- **IPPR Transport Roundtables (August 2025):** Highlighted that disabled people, young people, and those in temporary accommodation are disproportionately affected by poor connectivity — with some changing three or four buses to access healthcare.
-- **Parliamentary Debate on Regional Transport Inequality (September 2025):** MPs cited stark examples — constituencies 40 miles from London where buses are 30–90 minutes apart, disappearing entirely after 7 pm.
-- **Integrated National Transport Strategy:** Government aim to put people at the heart of the transport system, with connectivity improvements measured against a London benchmark.
+**DfT Connectivity Metric (September 2025)** is the Government's first nationally agreed connectivity score, now the official "national metric of connectivity" for planning decisions. The Transport Secretary has positioned it as central to housing delivery and sustainable transport planning.
 
-Urban bus services have declined by 48% and rural bus services by 52% since 2008, with some local authority areas experiencing declines of up to 80%.
+**Bus Services Act 2025** received Royal Assent in October 2025, introducing new obligations on local authorities to consider socially necessary bus services, with measures on bus franchising and minimum connectivity standards.
+
+**Transport Committee Report (August 2025)** found that 56% of small towns are in a "transport desert" (CPRE data), bus journeys outside London fell 21.7% between 2009 and 2024, and some young people in Somerset face three to four hours of daily travel to reach education.
+
+**NHS Missed Appointments:** An estimated 10% of hospital outpatient appointments are missed due to transport problems. In 2021/22, nearly 7.5 million outpatient appointments were missed nationally. Missed appointments cost the NHS over £216 million per year.
+
+**IPPR Transport Roundtables (August 2025)** documented disabled people taking three or four buses to access healthcare, young people in temporary accommodation making long costly journeys to school, and transport costs as a significant driver of poverty, particularly in the North East.
+
+**Parliamentary Debate on Regional Transport Inequality (September 2025):** MPs described constituencies 40 miles from London where buses run 30 to 90 minutes apart and disappear entirely after 7 pm, while London has a bus stop every 400 metres.
+
+Bus services have declined sharply: urban services down 48% and rural services down 52% since 2008, with some local authority areas losing up to 80% of routes.
 
 ---
 
 ## Data Sources
 
-All datasets are open-access and publicly available:
+All datasets are open-access:
 
 | Dataset | Detail | Geography | Source |
 |---------|--------|-----------|--------|
-| **DfT Connectivity Metric** | Overall, walking, cycling, public transport, and driving scores by six destination types (employment, healthcare, education, shopping, leisure, social) | OA, LSOA, LAD, Region | [GOV.UK — Transport Connectivity Metric](https://www.gov.uk/government/publications/transport-connectivity-metric/transport-connectivity-metric) |
-| **IMD 2019** | Index of Multiple Deprivation — overall rank, decile, and domain scores including Health Deprivation & Disability | LSOA (England) | [GOV.UK — English Indices of Deprivation 2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) |
-| **Census 2021 — Disability (TS038)** | Long-term health problems or disabilities: limited a lot, limited a little, not limited | OA, LSOA, LAD | [ONS — Disability](https://www.ons.gov.uk/datasets/TS038/editions/2021/versions/2) |
-| **Census 2021 — Car Availability (TS045)** | Households with 0, 1, 2, 3+ cars or vans | OA, LSOA, LAD | [Nomis — TS045](https://www.nomisweb.co.uk/datasets/c2021ts045) |
-| **Census 2021 — Population & Age** | Usual residents by age and sex | OA, LSOA, LAD | [Nomis — Census 2021 Bulk Downloads](https://www.nomisweb.co.uk/sources/census_2021_bulk) |
-| **ONS Rural–Urban Classification 2021** | Urban, Larger Rural Settlement, Smaller Rural Settlement — with Relative Access (Nearer/Further) | OA, LSOA, MSOA, LAD | [ONS — 2021 Rural Urban Classification](https://www.ons.gov.uk/methodology/geography/geographicalproducts/ruralurbanclassifications/2021ruralurbanclassification) |
-| **ONS Geographic Lookup Tables** | OA → LSOA → MSOA → LAD mapping (May 2025 edition) | All levels | [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) |
-| **ONS Population Estimates** | Mid-year population estimates by LAD | LAD | [ONS — Population Estimates](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates) |
+| **DfT Connectivity Metric** | Overall, walking, cycling, public transport, and driving scores across six destination types (employment, healthcare, education, shopping, leisure, social) | OA, LSOA, LAD, Region | [GOV.UK](https://www.gov.uk/government/publications/transport-connectivity-metric/transport-connectivity-metric) |
+| **IMD 2019** | Index of Multiple Deprivation: overall rank, decile, and domain scores including Health Deprivation & Disability | LSOA (England) | [GOV.UK](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) |
+| **Census 2021: Disability (TS038)** | Long-term health problems or disabilities: limited a lot, limited a little, not limited | OA, LSOA, LAD | [ONS](https://www.ons.gov.uk/datasets/TS038/editions/2021/versions/2) |
+| **Census 2021: Car Availability (TS045)** | Households by number of cars or vans (0, 1, 2, 3+) | OA, LSOA, LAD | [Nomis](https://www.nomisweb.co.uk/datasets/c2021ts045) |
+| **Census 2021: Population & Age** | Usual residents by age and sex | OA, LSOA, LAD | [Nomis Bulk Downloads](https://www.nomisweb.co.uk/sources/census_2021_bulk) |
+| **ONS Rural-Urban Classification 2021** | Urban, Larger Rural, Smaller Rural with Relative Access (Nearer/Further) | OA, LSOA, MSOA, LAD | [ONS](https://www.ons.gov.uk/methodology/geography/geographicalproducts/ruralurbanclassifications/2021ruralurbanclassification) |
+| **ONS Geographic Lookup Tables** | OA to LSOA to MSOA to LAD mapping (May 2025 edition) | All levels | [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) |
+| **ONS Population Estimates** | Mid-year population estimates by LAD | LAD | [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates) |
 
 ### Data Notes
 
-- **DfT Connectivity Metric** uses Q4 2024/Q1 2025 data on 2021 OA boundaries. Public ODS tables are available at OA/LSOA/LAD/Region level. The metric covers four transport modes (walking, cycling, public transport, driving) across six travel purposes, scored on a 0–100 relative scale. The default "overall" score excludes driving, weighting sustainable modes approximately 52% public transport, 40% walking, 8% cycling.
-- **IMD 2019** covers England only. Welsh equivalents (WIMD 2019) use a different methodology and are not directly comparable, which is acknowledged in the analysis.
-- **Rural–Urban Classification 2021** is a significant update from the 2011 version, now using three simplified categories with a new Relative Access dimension based on estimated 30-minute car travel times to Built-Up Areas with 75,000+ population.
-- The DfT metric assumes perfect timetable adherence, does not model travel costs, and uses pre-COVID travel behaviour data (NTS 2011–2020). These limitations are noted throughout.
+**DfT Connectivity Metric** uses Q4 2024/Q1 2025 data on 2021 OA boundaries. Public ODS tables cover OA, LSOA, LAD, and Region. The metric scores four transport modes (walking, cycling, public transport, driving) across six travel purposes on a 0 to 100 relative scale. The default "overall" score excludes driving and weights sustainable modes at roughly 52% public transport, 40% walking, 8% cycling.
+
+**IMD 2019** covers England only. The Welsh Index of Multiple Deprivation (WIMD 2019) uses a different methodology and is not directly comparable. This is acknowledged throughout the analysis.
+
+**Rural-Urban Classification 2021** is a major update from 2011, with three simplified settlement categories and a new Relative Access dimension based on estimated 30-minute car travel to Built-Up Areas with 75,000+ residents.
+
+**Known limitations of the DfT metric:** assumes perfect timetable adherence (areas with unreliable services appear better connected than they are), does not model travel cost or affordability, and uses pre-COVID travel behaviour data from the National Travel Survey 2011 to 2020.
 
 ---
 
@@ -83,46 +97,46 @@ All datasets are open-access and publicly available:
 
 ### 1. Geographic Harmonisation
 
-All datasets are linked via ONS 2021 Census geography using the OA → LSOA → MSOA → LAD best-fit lookup (May 2025 edition). The LSOA is the primary analytical unit due to data availability across all sources. OA-level analysis is used for hyper-local case studies; LAD and Regional aggregation uses population-weighted averages consistent with the DfT's own methodology.
+All datasets are linked through ONS 2021 Census geography using the OA to LSOA to MSOA to LAD best-fit lookup (May 2025 edition). LSOA is the primary unit of analysis because all data sources are available at this level. OA-level analysis is used for local case studies. LAD and Regional aggregation uses population-weighted averages, consistent with the DfT's own approach.
 
-### 2. Multi-Level Data Integration
+### 2. Data Integration
 
-At LSOA level, merge:
+At LSOA level, the master dataset merges:
 - DfT connectivity scores (overall, by mode, by destination type)
-- IMD 2019 rank, decile, and Health Deprivation domain
+- IMD 2019 rank, decile, and Health Deprivation domain score
 - Census 2021 disability prevalence
-- Census 2021 car/van availability (% of households with no car)
-- ONS 2021 Rural–Urban Classification
-- Population estimates
+- Census 2021 car/van availability (% households with no car)
+- ONS 2021 Rural-Urban Classification
+- Mid-year population estimates
 
 ### 3. Derived Indices
 
-| Index | Formula | Interpretation |
-|-------|---------|----------------|
-| **Car Dependency Index** | `Driving Score − Public Transport Score` | Higher values indicate areas where driving significantly outperforms public transport — structurally car-dependent |
-| **Active Travel Gap** | `Mean(Walking, Cycling) − Driving` | Negative values indicate driving-dominant areas with weak active travel infrastructure |
-| **Need–Connectivity Mismatch** | `Disability Rate × (1 − Healthcare PT Score / 100)` | Identifies areas with high healthcare need but poor public transport access to health services |
-| **Deprivation–Connectivity Gradient** | `Mean PT Score at IMD Decile 10 − Mean PT Score at IMD Decile 1` | Quantifies the accessibility gap between the least and most deprived communities |
+| Index | Formula | What it captures |
+|-------|---------|------------------|
+| **Car Dependency Index** | `Driving Score - Public Transport Score` | Areas where driving far outperforms public transport, indicating structural car dependency |
+| **Active Travel Gap** | `Mean(Walking, Cycling) - Driving` | Negative values flag areas where driving dominates and active travel provision is weak |
+| **Need-Connectivity Mismatch** | `Disability Rate x (1 - Healthcare PT Score / 100)` | High-need areas with poor public transport access to health services |
+| **Deprivation-Connectivity Gradient** | `Mean PT Score at IMD Decile 10 - Mean PT Score at Decile 1` | The size of the accessibility gap between the least and most deprived communities |
 
 ### 4. Inequality Gradient Analysis
 
-For each region and nationally: calculate mean public transport connectivity by IMD decile, test for gradient linearity, and compute the Decile 10 minus Decile 1 gap. This reveals whether transport inequality tracks deprivation systematically or varies by regional context.
+For each region and nationally: calculate mean public transport connectivity by IMD decile, test for gradient linearity, and compute the Decile 10 minus Decile 1 gap. This shows whether transport inequality tracks deprivation systematically or varies by regional context.
 
 ### 5. LAD Policy Ranking
 
-Aggregate LSOA-level metrics to LAD using population-weighted means. Rank Local Authorities by:
+Aggregate LSOA metrics to LAD using population-weighted means. Rank Local Authorities by:
 - Mean public transport connectivity
-- Proportion of LSOAs in the national bottom 20%
+- Share of LSOAs in the national bottom 20%
 - Car Dependency Index
-- Need–Connectivity Mismatch score
+- Need-Connectivity Mismatch score
 
-### 6. Sensitivity and Limitations
+### 6. Limitations
 
-- The DfT metric's exclusion of travel cost means affordability barriers are not captured
-- Pre-COVID travel behaviour data may not reflect current patterns
-- IMD 2019 data is based on 2015/16 indicators — deprivation patterns may have shifted
-- Timetable adherence assumptions mean areas with unreliable services appear better connected than they are
-- Wales analysis is limited by IMD incompatibility; Welsh Index of Multiple Deprivation (WIMD) is flagged separately
+- The DfT metric does not include travel cost, so affordability barriers are invisible
+- Pre-COVID travel behaviour data may not reflect current commuting and travel patterns
+- IMD 2019 uses 2015/16 indicators and deprivation patterns may have shifted
+- Timetable adherence assumptions mean areas with poor service reliability look better connected than they are
+- Wales analysis is constrained by IMD incompatibility; WIMD results are reported separately
 
 ---
 
@@ -132,30 +146,30 @@ Aggregate LSOA-level metrics to LAD using population-weighted means. Rank Local 
 
 | File | Description |
 |------|-------------|
-| `master_lsoa_dataset.csv` | LSOA-level master dataset — connectivity, deprivation, disability, car ownership, rurality |
-| `master_oa_dataset.csv` | OA-level dataset for hyper-local analysis and case studies |
-| `lad_summary.csv` | LAD-level summary with policy-relevant rankings |
+| `master_lsoa_dataset.csv` | LSOA-level master dataset with connectivity, deprivation, disability, car ownership, and rurality |
+| `master_oa_dataset.csv` | OA-level dataset for local case studies |
+| `lad_summary.csv` | LAD-level summary with policy rankings |
 | `region_summary.csv` | Regional structural analysis |
 
-### Visualisations & Dashboards
+### Visualisations and Dashboards
 
-- National inequality dashboard — IMD vs connectivity scatter, region filters, LAD ranking table
-- Car Dependency heatmap — LSOA-level map with top 50 most car-dependent councils
-- Healthcare Access Mismatch map — top 10% worst areas overlaid with disability prevalence
-- Urban–rural connectivity comparison charts
+- National inequality dashboard with IMD vs connectivity scatter plots, region filters, and LAD ranking tables
+- Car dependency map at LSOA level with the 50 most car-dependent councils highlighted
+- Healthcare access mismatch map showing the top 10% worst areas overlaid with disability prevalence
+- Urban vs rural connectivity comparison charts
 - Regional inequality gradient profiles
 
-Interactive dashboards will be published via [OpenDataInsights.org](https://opendatainsights.org).
+Interactive dashboards will be published at [OpenDataInsights.org](https://opendatainsights.org).
 
 ### Policy Brief
 
-A standalone 10-page policy brief structured as:
+A standalone brief (10 pages maximum) covering:
 1. Problem statement
 2. Data and method
-3. Key national findings
+3. National findings
 4. Regional variation
 5. LAD-level rankings
-6. Policy implications and recommendations
+6. Policy implications
 
 ---
 
@@ -163,27 +177,27 @@ A standalone 10-page policy brief structured as:
 
 **Primary:** Local Authorities, Combined Authorities, Department for Transport, NHS Integrated Care Boards, Office for Health Improvement and Disparities (OHID), Active Travel England
 
-**Secondary:** Transport NGOs (Sustrans, Transport for All, Campaign for Better Transport), disability organisations (Disability Rights UK, Wheels for Wellbeing), think tanks (IPPR, Resolution Foundation, Joseph Rowntree Foundation), Parliamentary Transport Committee
+**Secondary:** Sustrans, Transport for All, Campaign for Better Transport, Disability Rights UK, Wheels for Wellbeing, IPPR, Resolution Foundation, Joseph Rowntree Foundation, Parliamentary Transport Committee
 
 ---
 
 ## Project Status
 
-> 🚧 **Under active development**
+> 🚧 Under active development
 
 - [ ] Data acquisition and harmonisation
 - [ ] Master LSOA dataset construction
 - [ ] Derived indices and national inequality analysis
 - [ ] LAD and Regional aggregation
 - [ ] Dashboard development
-- [ ] Policy brief drafting
-- [ ] Publication and dissemination
+- [ ] Policy brief
+- [ ] Publication
 
 ---
 
 ## Reproducibility
 
-All analysis code, data processing steps, and methodology documentation will be published in this repository. Raw data sources are publicly available from the links above. The project is designed to be fully reproducible by any analyst with access to R or Python and the listed open datasets.
+All code, data processing steps, and methodology documentation will be published in this repository. Raw data sources are publicly available from the links above. The project is designed to be fully reproducible by any analyst with access to R or Python and the listed open datasets.
 
 ---
 
@@ -201,6 +215,6 @@ Census data: [© Crown copyright](https://www.ons.gov.uk/methodology/geography/l
 
 ## About Open Data Insights
 
-[Open Data Insights](https://opendatainsights.org) is a UK-focused open-access research initiative that transforms public datasets into actionable, policy-relevant analysis. We bridge the gap between open government data and the communities, councils, and organisations that need it most.
+[Open Data Insights](https://opendatainsights.org) is a UK-focused open-access research initiative that turns public datasets into analysis that councils, health bodies, and civil society organisations can act on.
 
 > *Open data should lead to open decisions.*
