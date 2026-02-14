@@ -190,18 +190,22 @@ All analysis code, data processing steps, and methodology documentation will be 
 ## Licence
 
 <a href="https://opensource.org/licenses/MIT">
-  <img alt="MIT License" style="border-width:0" src="https://img.shields.io/badge/Code-MIT-blue.svg" />
+  <img alt="MIT License" src="https://img.shields.io/badge/Code-MIT-blue.svg" />
 </a>
 <a rel="license" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">
-  <img alt="Open Government Licence v3.0" style="border-width:0" src="https://img.shields.io/badge/Data-OGL_v3.0-brightgreen.svg" />
+  <img alt="Open Government Licence v3.0" src="https://img.shields.io/badge/Data-OGL_v3.0-brightgreen.svg" />
 </a>
 <a href="https://www.ons.gov.uk/methodology/geography/licences">
-  <img alt="Crown Copyright" style="border-width:0" src="https://img.shields.io/badge/Census-Crown_Copyright-yellow.svg" />
+  <img alt="Crown Copyright" src="https://img.shields.io/badge/Census-Crown_Copyright-yellow.svg" />
 </a>
 
-Analysis code is licensed under the <a href="https://opensource.org/licenses/MIT">MIT Licence</a>.<br>
+<br>
+
+Analysis code is licensed under the <a href="https://opensource.org/licenses/MIT">MIT Licence</a>.
+<br>
 Contains public sector information licensed under the
-<a rel="license" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>.<br>
+<a rel="license" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>.
+<br>
 Census data: <a href="https://www.ons.gov.uk/methodology/geography/licences">© Crown copyright</a>.
 ---
 
