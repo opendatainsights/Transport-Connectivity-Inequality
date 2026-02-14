@@ -33,7 +33,7 @@ All datasets are open-access:
 
 | Source | Detail | Level | Link |
 |--------|--------|-------|------|
-| **Department for Transport (DfT)** | Connectivity Metrics (2025) | LSOA | [DfT Statistics](https://www.gov.uk/government/collections/transport-connectivity-statistics) |
+| **Department for Transport (DfT)** | Connectivity Metrics (2025) | LSOA | [DfT Statistics]([https://www.gov.uk/government/collections/transport-connectivity-statistics](https://www.gov.uk/government/publications/transport-connectivity-metric/transport-connectivity-metric)) |
 | **IMD 2019** | Index of Multiple Deprivation | LSOA | [IMD 2019](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) |
 | **Census 2021** | Car Ownership, Disability, Population Structure | OA | [Census 2021](https://www.ons.gov.uk/census) |
 | **ONS Rural–Urban Classification** | Settlement type indicators | LSOA / LAD | [Rural–Urban Classification](https://www.ons.gov.uk/methodology/geography/geographicalproducts/ruralurbanclassifications) |
