@@ -72,22 +72,27 @@ All datasets are open-access:
 
 | Dataset | Detail | Geography | Source |
 |---------|--------|-----------|--------|
-| **DfT Connectivity Metric** | Overall, walking, cycling, public transport, and driving scores across six destination types (employment, healthcare, education, shopping, leisure, social) | OA, LSOA, LAD, Region | [GOV.UK](https://www.gov.uk/government/publications/transport-connectivity-metric/transport-connectivity-metric) |
-| **IMD 2019** | Index of Multiple Deprivation: overall rank, decile, and domain scores including Health Deprivation & Disability | LSOA (England) | [GOV.UK](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019) |
-| **Census 2021: Disability (TS038)** | Long-term health problems or disabilities: limited a lot, limited a little, not limited | OA, LSOA, LAD | [ONS](https://www.ons.gov.uk/datasets/TS038/editions/2021/versions/2) |
-| **Census 2021: Car Availability (TS045)** | Households by number of cars or vans (0, 1, 2, 3+) | OA, LSOA, LAD | [Nomis](https://www.nomisweb.co.uk/datasets/c2021ts045) |
-| **Census 2021: Population & Age** | Usual residents by age and sex | OA, LSOA, LAD | [Nomis Bulk Downloads](https://www.nomisweb.co.uk/sources/census_2021_bulk) |
-| **ONS Rural-Urban Classification 2021** | Urban, Larger Rural, Smaller Rural with Relative Access (Nearer/Further) | OA, LSOA, MSOA, LAD | [ONS](https://www.ons.gov.uk/methodology/geography/geographicalproducts/ruralurbanclassifications/2021ruralurbanclassification) |
-| **ONS Geographic Lookup Tables** | OA to LSOA to MSOA to LAD mapping (May 2025 edition) | All levels | [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/) |
-| **ONS Population Estimates** | Mid-year population estimates by LAD | LAD | [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates) |
+| **DfT Connectivity Metric** | Overall, walking, cycling, public transport, and driving scores across six destination types (employment, healthcare, education, shopping, leisure, social) | OA, LSOA, LAD, Region | [GOV.UK](https://www.gov.uk/government/publications/transport-connectivity-metric) |
+| **IMD 2025** | Index of Multiple Deprivation 2025: overall rank and decile | LSOA (England) | [GOV.UK](https://www.gov.uk/government/statistics/english-indices-of-deprivation-2025) |
+| **Census 2021: Disability (TS038)** | Long-term health problems or disabilities: limited a lot, limited a little, not limited | Lower Tier Local Authority | [ONS](https://www.ons.gov.uk/datasets/TS038/editions/2021/versions/2) |
+| **Census 2021: Car Availability (TS045)** | Households by number of cars or vans (0, 1, 2, 3+) | OA | [ONS](https://www.ons.gov.uk/datasets/TS045/editions/2021/versions/4) |
+| **Census 2021: Sex by Age (RM121)** | Usual residents by sex and age — used to derive OA population totals | OA | [UK Data Service](https://statistics.ukdataservice.ac.uk/dataset/england-and-wales-census-2021-rm121-sex-by-age) |
+| **ONS Rural-Urban Classification 2021** | Urban, Larger Rural, Smaller Rural with Relative Access (Nearer/Further), classified at LAD level | LAD | [data.gov.uk](https://www.data.gov.uk/dataset/8daa9988-f4e6-40e3-82df-58bb0ae947a3/rural-urban-classification-2021-of-local-authority-districts-2024-in-ew) |
+| **ONS Geographic Lookup Tables** | LSOA (2021) to Electoral Ward (2024) to LAD (2024) best-fit lookup | LSOA → LAD | [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/ons::lsoa-2021-to-electoral-ward-2024-to-lad-2024-best-fit-lookup-in-ew/about) |
+| **Postcode to OA/LSOA/MSOA/LAD Lookup** | Best-fit mapping between UK postcodes and census geographies (Nov 2024) | Postcode → OA → LSOA → LAD | [ONS Open Geography Portal](https://geoportal.statistics.gov.uk/datasets/068ee476727d47a3a7a0d976d4343c59/about) |
+| **ONS Population Estimates** | Mid-year population estimates by LAD — used to derive region-to-LAD hierarchy and population weights | LAD | [ONS](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/estimatesofthepopulationforenglandandwales) |
 
 ### Data Notes
 
 **DfT Connectivity Metric** uses Q4 2024/Q1 2025 data on 2021 OA boundaries. Public ODS tables cover OA, LSOA, LAD, and Region. The metric scores four transport modes (walking, cycling, public transport, driving) across six travel purposes on a 0 to 100 relative scale. The default "overall" score excludes driving and weights sustainable modes at roughly 52% public transport, 40% walking, 8% cycling.
 
-**IMD 2019** covers England only. The Welsh Index of Multiple Deprivation (WIMD 2019) uses a different methodology and is not directly comparable. This is acknowledged throughout the analysis.
+**IMD 2025** covers England only and uses 2021 LSOA boundaries with 2024 LAD codes. The Welsh Index of Multiple Deprivation (WIMD) uses a different methodology and is not directly comparable. Wales LSOAs are included in connectivity analysis but IMD deprivation fields are England-only throughout.
 
-**Rural-Urban Classification 2021** is a major update from 2011, with three simplified settlement categories and a new Relative Access dimension based on estimated 30-minute car travel to Built-Up Areas with 75,000+ residents.
+**Census 2021 Disability (TS038)** is published at Lower Tier Local Authority level and classifies disability under the Equality Act 2010. It is joined to LSOAs via LAD code and treated as a LAD-level covariate in the master dataset.
+
+**Census 2021 Car Availability (TS045)** is used at OA level with all five categories (no car, 1 car, 2 cars, 3+ cars, does not apply). OA-level data are aggregated to LSOA using the postcode best-fit lookup, enabling precise % no-car household estimates for each LSOA.
+
+**ONS Population Estimates (Mid-2024)** are used for population-weighted aggregation from LSOA to LAD and Region, consistent with the DfT's own approach. The region-to-LAD hierarchy is parsed directly from the structured ONS file.
 
 **Known limitations of the DfT metric:** assumes perfect timetable adherence (areas with unreliable services appear better connected than they are), does not model travel cost or affordability, and uses pre-COVID travel behaviour data from the National Travel Survey 2011 to 2020.
 
@@ -97,69 +102,60 @@ All datasets are open-access:
 
 ### 1. Geographic Harmonisation
 
-All datasets are linked through ONS 2021 Census geography using the OA to LSOA to MSOA to LAD best-fit lookup (May 2025 edition). LSOA is the primary unit of analysis because all data sources are available at this level. OA-level analysis is used for local case studies. LAD and Regional aggregation uses population-weighted averages, consistent with the DfT's own approach.
+All datasets are linked through ONS 2021 Census geography. LSOA is the primary unit of analysis because all data sources are available at this level. OA-level vehicle and population data are aggregated to LSOA using the Postcode to OA/LSOA/MSOA/LAD best-fit lookup (November 2024 edition). LAD and Regional aggregation uses population-weighted averages, consistent with the DfT's own approach. The region-to-LAD hierarchy is derived by parsing the structured ONS mid-year population estimates file.
 
 ### 2. Data Integration
 
 At LSOA level, the master dataset merges:
 - DfT connectivity scores (overall, by mode, by destination type)
-- IMD 2019 rank, decile, and Health Deprivation domain score
-- Census 2021 disability prevalence
-- Census 2021 car/van availability (% households with no car)
-- ONS 2021 Rural-Urban Classification
-- Mid-year population estimates
+- IMD 2025 rank and decile (England only)
+- Census 2021 disability prevalence (TS038, joined at LAD level)
+- Census 2021 car/van availability (TS045, aggregated OA → LSOA)
+- ONS 2021 Rural-Urban Classification (LAD level)
+- Mid-year population estimates (used as aggregation weights)
 
 ### 3. Derived Indices
 
 | Index | Formula | What it captures |
 |-------|---------|------------------|
-| **Car Dependency Index** | `Driving Score - Public Transport Score` | Areas where driving far outperforms public transport, indicating structural car dependency |
-| **Active Travel Gap** | `Mean(Walking, Cycling) - Driving` | Negative values flag areas where driving dominates and active travel provision is weak |
-| **Need-Connectivity Mismatch** | `Disability Rate x (1 - Healthcare PT Score / 100)` | High-need areas with poor public transport access to health services |
-| **Deprivation-Connectivity Gradient** | `Mean PT Score at IMD Decile 10 - Mean PT Score at Decile 1` | The size of the accessibility gap between the least and most deprived communities |
+| **Car Dependency Index** | `Driving Score − Public Transport Score` | Areas where driving far outperforms public transport, indicating structural car dependency |
+| **Active Travel Gap** | `Mean(Walking, Cycling) − Driving` | Negative values flag areas where driving dominates and active travel provision is weak |
+| **Need-Connectivity Mismatch** | `Disability Rate × (1 − Healthcare PT Score / 100)` | High-need areas with poor public transport access to health services |
+| **Deprivation-Connectivity Gradient** | `Mean PT Score at IMD Decile 10 − Mean PT Score at Decile 1` | The size of the accessibility gap between the least and most deprived communities |
 
-### 4. Inequality Gradient Analysis
+### 4. Classification Flags
 
-For each region and nationally: calculate mean public transport connectivity by IMD decile, test for gradient linearity, and compute the Decile 10 minus Decile 1 gap. This shows whether transport inequality tracks deprivation systematically or varies by regional context.
+Each LSOA is assigned a set of binary classification flags:
 
-### 5. LAD Policy Ranking
+| Flag | Definition |
+|------|-----------|
+| `is_transport_desert` | Bottom national quintile for PT connectivity (≤ 20th percentile) |
+| `is_car_dependent_poor_pt` | Driving in top 40% nationally and PT in bottom 40% |
+| `is_structurally_excluded` | IMD Deciles 1–4 AND majority no-car households AND bottom 20% PT |
 
-Aggregate LSOA metrics to LAD using population-weighted means. Rank Local Authorities by:
+### 5. Inequality Gradient Analysis
+
+For each region and nationally: calculate mean public transport connectivity by IMD decile, test for gradient linearity, and compute the Decile 10 minus Decile 1 gap. Gradients are also computed separately for each destination type (employment, healthcare, education, shopping, leisure) to identify where deprivation-related gaps are sharpest. This shows whether transport inequality tracks deprivation systematically or varies by regional context.
+
+### 6. LAD Policy Ranking
+
+Aggregate LSOA metrics to LAD using population-weighted means. Rank Local Authorities on four dimensions, each ranked 1 (worst) to n (best):
 - Mean public transport connectivity
 - Share of LSOAs in the national bottom 20%
 - Car Dependency Index
 - Need-Connectivity Mismatch score
 
-### 6. Limitations
+A composite priority score is the simple mean of all four ranks. Rank 1 indicates the greatest need for policy intervention.
+
+### 7. Limitations
 
 - The DfT metric does not include travel cost, so affordability barriers are invisible
 - Pre-COVID travel behaviour data may not reflect current commuting and travel patterns
-- IMD 2019 uses 2015/16 indicators and deprivation patterns may have shifted
-- Timetable adherence assumptions mean areas with poor service reliability look better connected than they are
-- Wales analysis is constrained by IMD incompatibility; WIMD results are reported separately
+- Timetable adherence assumptions mean areas with poor service reliability appear better connected than they are
+- IMD 2025 covers England only; Wales LSOAs have no deprivation decile in the master dataset
+- Disability data (TS038) is available at LTLA level only and is applied as a LAD-level covariate rather than an LSOA-level measure
 
 ---
-
-## Outputs
-
-### Datasets
-
-| File | Description |
-|------|-------------|
-| `master_lsoa_dataset.csv` | LSOA-level master dataset with connectivity, deprivation, disability, car ownership, and rurality |
-| `master_oa_dataset.csv` | OA-level dataset for local case studies |
-| `lad_summary.csv` | LAD-level summary with policy rankings |
-| `region_summary.csv` | Regional structural analysis |
-
-### Visualisations and Dashboards
-
-- National inequality dashboard with IMD vs connectivity scatter plots, region filters, and LAD ranking tables
-- Car dependency map at LSOA level with the 50 most car-dependent councils highlighted
-- Healthcare access mismatch map showing the top 10% worst areas overlaid with disability prevalence
-- Urban vs rural connectivity comparison charts
-- Regional inequality gradient profiles
-
-Interactive dashboards will be published at [OpenDataInsights.org](https://opendatainsights.org).
 
 ### Policy Brief
 
@@ -185,10 +181,10 @@ A standalone brief (10 pages maximum) covering:
 
 > 🚧 Under active development
 
-- [ ] Data acquisition and harmonisation
-- [ ] Master LSOA dataset construction
-- [ ] Derived indices and national inequality analysis
-- [ ] LAD and Regional aggregation
+- [x] Data acquisition and harmonisation
+- [x] Master LSOA dataset construction
+- [x] Derived indices and national inequality analysis
+- [x] LAD and Regional aggregation
 - [ ] Dashboard development
 - [ ] Policy brief
 - [ ] Publication
@@ -197,7 +193,7 @@ A standalone brief (10 pages maximum) covering:
 
 ## Reproducibility
 
-All code, data processing steps, and methodology documentation will be published in this repository. Raw data sources are publicly available from the links above. The project is designed to be fully reproducible by any analyst with access to R or Python and the listed open datasets.
+All code, data processing steps, and methodology documentation are published in this repository. Raw data sources are publicly available from the links above. The project is fully reproducible by any analyst with access to R and the listed open datasets. The main analysis script requires the following R packages: `rio`, `tidyverse`, `janitor`, `scales`, `ggrepel`, `patchwork`, `sf`, `ggplot2`, `viridis`, `glue` (all installable via `pacman::p_load()`).
 
 ---
 
